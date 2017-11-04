@@ -1,43 +1,49 @@
-package student;
+package student.acadamics;
 
 import java.io.*;
 import java.util.*;
 
-public class Student implements Serializable{
+public class Student implements Serializable {
 	private String name;
-
-	private String rollno;
+	private String rollNo;
 	private String batch;
-	private ArrayList <Course> coursesTaken = new ArrayList<>();
+	private ArrayList<Course> coursesTaken = new ArrayList<>();
 
-	Student(String n, String r, String b, ArrayList<Course> c){
-		name=n;
-		rollno=r;
-		this.coursesTaken.addAll(c);
-	}
-	public void setName(String name) {
+	public Student(String name, String rollNo, ArrayList<Course> courseList) {
 		this.name = name;
-	}
-	public void setRollNo(String roll) {
-		rollno = roll;
-	}
-	public void setBatch(String batch) {
-		this.batch = batch;
-	}
-	public void setCourses(ArrayList<Course>c) {
-		this.coursesTaken.addAll(c);
+		this.rollNo = rollNo;
+		coursesTaken.addAll(courseList);
 	}
 
 	public String getName() {
 		return name;
 	}
-	public String getRollNo() {
-		return rollno;
+
+	public void setName(String name) {
+		this.name = name;
 	}
+
+	public String getRollNo() {
+		return rollNo;
+	}
+
+	public void setRollNo(String roll) {
+		rollNo = roll;
+	}
+
 	public String getBatch() {
 		return batch;
 	}
+
+	public void setBatch(String batch) {
+		this.batch = batch;
+	}
+
 	public ArrayList<Course> getCourses() {
 		return coursesTaken;
+	}
+
+	public void setCourses(ArrayList<Course> c) {
+		coursesTaken.addAll(c);
 	}
 }

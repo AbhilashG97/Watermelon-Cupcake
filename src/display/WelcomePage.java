@@ -2,15 +2,12 @@ package display;
 
 public class WelcomePage {
 
-    public static void diaplyHello(){
+    public static void sayHello(){
         System.out.println("********************Welcome to Student Diary********************");
     }
 
     public static void selectDiaryTypeMessage(){
-        System.out.println("Select a diary type");
-    }
-
-    public static void selectDiaryType(){
+        System.out.println("\n---------------------> Select a Diary Type <---------------------\n");
         System.out.println("******************** CREATE NEW STUDENT DIARY [1] ********************");
         System.out.println("**********************************************************************");
         System.out.println("**********************************************************************");

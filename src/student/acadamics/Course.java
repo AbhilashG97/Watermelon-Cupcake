@@ -1,16 +1,29 @@
-package student;
+package student.acadamics;
 
 import java.io.Serializable;
 
 public class Course implements Serializable {
 	private String subject;
 	private int credits;
+	private String courseCode;
 	private Marks marks;
 
-	Course(String subject, int credits, Marks marks) {
+	public Course(String subject,
+		   int credits,
+		   String courseCode,
+		   Marks marks) {
 		this.subject = subject;
 		this.credits = credits;
 		this.marks = marks;
+		this.courseCode = courseCode;
+	}
+
+	public String getCourseCode() {
+		return courseCode;
+	}
+
+	public void setCourseCode(String courseCode) {
+		this.courseCode = courseCode;
 	}
 
 	public Marks getMarks() {
@@ -38,7 +51,7 @@ public class Course implements Serializable {
 	}
 
 	public String toString() {
-		return "Course: " + getSubject() + " Credits: " + getCredits() + " Marks: " + getMarks();
+		return "Course: " + getSubject() + "Course Code : " + getCourseCode() + " Credits: " + getCredits() + " Marks: " + getMarks();
 	}
 
 }
