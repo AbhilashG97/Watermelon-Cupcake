@@ -51,6 +51,10 @@ public class Marks implements Serializable {
 		return m;
 	}
 
+	public double getInternalMarks(){
+		return getFirstInternals() + getSecondInternals();
+	}
+
 	public String getGrade() {
 		if (getAttendance() > 0) {
 			if (m > 95)
@@ -74,7 +78,8 @@ public class Marks implements Serializable {
 	}
 
 	public String toString() {
-		return "Average Marks: " + " " + this.getTotalAverage() + " " + "Grade: " + this.getGrade();
+		return "\n        Internal Marks : "+ getInternalMarks()+"\n        End Semester Marks : "+getEndSem()+
+				"\n        Average Marks: " + " " + getTotalAverage() + " " + "\n        Grade: " + getGrade();
 	}
 
 }

@@ -9,9 +9,10 @@ public class Student implements Serializable {
 	private String batch;
 	private ArrayList<Course> coursesTaken = new ArrayList<>();
 
-	public Student(String name, String rollNo, ArrayList<Course> courseList) {
+	public Student(String name, String rollNo, String batch, ArrayList<Course> courseList) {
 		this.name = name;
 		this.rollNo = rollNo;
+		this.batch = batch;
 		coursesTaken.addAll(courseList);
 	}
 
@@ -45,5 +46,11 @@ public class Student implements Serializable {
 
 	public void setCourses(ArrayList<Course> c) {
 		coursesTaken.addAll(c);
+	}
+
+	@Override
+	public String toString(){
+		return "Student Name : " + getName() + "\nRoll Number : " + getRollNo() +
+				"\nBatch : " + getBatch() + "\nCourses : " +getCourses();
 	}
 }

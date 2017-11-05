@@ -51,7 +51,8 @@ public class Course implements Serializable {
 	}
 
 	public String toString() {
-		return "Course: " + getSubject() + "Course Code : " + getCourseCode() + " Credits: " + getCredits() + " Marks: " + getMarks();
+		return "\n   Course Code : " + getCourseCode() + " | Course: "
+				+ getSubject() + " | Credits: " + getCredits() + "\n   Marks: " + getMarks();
 	}
 
 }
