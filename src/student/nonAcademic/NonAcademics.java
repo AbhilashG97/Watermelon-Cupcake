@@ -2,7 +2,7 @@ package student.nonAcademic;
 
 public class NonAcademics {
 
-        Sports sports =new Sports();
+        Sports sports = new Sports();
         Volunteering volunteering = new Volunteering();
         Seminars seminar = new Seminars();
         Projects project = new Projects();
