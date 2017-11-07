@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Test {
 
-    /* This is a test class whose only
+    /* This is a test class; whose only
      * purpose is to test the classes
      * that have been created.
      */

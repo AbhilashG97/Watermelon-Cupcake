@@ -48,12 +48,14 @@ public class Diary {
         return course;
     }
 
-    //IDEA : - Create an ENUM for courses and then select the course based on the
-    // course code entered by the user.
+    //IDEA : - Create an ENUM/HashMap for courses and then select the course[key] based on the
+    // course code[value] entered by the user.
 
 
     public Marks setMarksOfCoursesTaken() throws Exception {
         marks = new Marks();
+
+        NewDiaryDisplay.displayMarksPage();
 
         NewDiaryDisplay.displaySetFirstInternalsMarksMessage();
         marks.setFirstInternals(Double.parseDouble(bfr.readLine()));
@@ -96,9 +98,8 @@ public class Diary {
         return student;
     }
 
-    public static void main(String[] args) throws Exception{
-        Diary diary = new Diary();
-        //diary.setAllStudentDetails();
+    public void displayAllStudentDetails(Student student){
+        System.out.println(student.toString());
     }
 
 }

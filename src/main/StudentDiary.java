@@ -2,10 +2,10 @@ package main;
 
 import Exceptions.InvalidInputException;
 import diary.Diary;
+import diary.StudentList;
 import display.WelcomePage;
+import student.acadamics.Student;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.Scanner;
 
 
@@ -43,6 +43,8 @@ public class StudentDiary {
     }
 
     public static void main(String[] args) throws Exception {
+        Student student = new Student();
+        StudentList studentList = new StudentList();
         StudentDiary studentDiary = new StudentDiary();
         Diary diary = new Diary();
 
@@ -53,10 +55,11 @@ public class StudentDiary {
 
         switch(studentDiary.getDiaryType()){
             case 1:
-                diary.setAllStudentDetails();
+                student = diary.setAllStudentDetails();
+                studentList.addToStudentList(student);
                 break;
             case 2:
-               System.out.println("Show Existing Diary");
+               diary.displayAllStudentDetails(student);
                break;
         }
 
