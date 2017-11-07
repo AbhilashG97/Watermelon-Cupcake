@@ -37,7 +37,7 @@ public class Diary {
         NewDiaryDisplay.displaySetCourseNameMessage();
         course.setCourseName(bfr.readLine());
 
-        NewDiaryDisplay.diplaySetCourseCodeMessage();
+        NewDiaryDisplay.displaySetCourseCodeMessage();
         course.setCourseCode(bfr.readLine());
 
         NewDiaryDisplay.displaySetCreditsMessage();

@@ -6,6 +6,7 @@ import diary.StudentList;
 import display.WelcomePage;
 import student.acadamics.Student;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -43,7 +44,7 @@ public class StudentDiary {
     }
 
     public static void main(String[] args) throws Exception {
-        Student student = new Student();
+        Student student;
         StudentList studentList = new StudentList();
         StudentDiary studentDiary = new StudentDiary();
         Diary diary = new Diary();
@@ -57,10 +58,15 @@ public class StudentDiary {
             case 1:
                 student = diary.setAllStudentDetails();
                 studentList.addToStudentList(student);
+                studentList.writeToFile();
+                diary.displayAllStudentDetails(studentList.getStudent(0));
                 break;
             case 2:
-               diary.displayAllStudentDetails(student);
-               break;
+                ArrayList<Student> stuList = studentList.readFromFile();
+                for(Student iterator : stuList){
+                    diary.displayAllStudentDetails(iterator);
+                }
+                break;
         }
 
     }

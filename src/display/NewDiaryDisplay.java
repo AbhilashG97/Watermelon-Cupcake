@@ -26,7 +26,7 @@ public class NewDiaryDisplay {
         System.out.println("Enter your batch");
     }
 
-    public static void diplaySetCourseCodeMessage() {
+    public static void displaySetCourseCodeMessage() {
         System.out.println("Enter the course code of the course you want to study");
     }
 
