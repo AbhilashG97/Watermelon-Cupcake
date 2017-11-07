@@ -15,6 +15,5 @@ public class Volunteering {
         while (it.hasNext()) {
             System.out.println(it.next());
         }
-
     }
 }

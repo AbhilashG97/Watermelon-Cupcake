@@ -3,16 +3,20 @@ package student.acadamics;
 import java.io.Serializable;
 
 public class Course implements Serializable {
-	private String subject;
+	private String courseName;
 	private int credits;
 	private String courseCode;
 	private Marks marks;
+
+	public Course(){
+		//Default Constructor
+	}
 
 	public Course(String subject,
 		   int credits,
 		   String courseCode,
 		   Marks marks) {
-		this.subject = subject;
+		this.courseName = subject;
 		this.credits = credits;
 		this.marks = marks;
 		this.courseCode = courseCode;
@@ -34,12 +38,12 @@ public class Course implements Serializable {
 		this.marks = marks;
 	}
 
-	public String getSubject() {
-		return subject;
+	public String getCourseName() {
+		return courseName;
 	}
 
-	public void setSubject(String subject) {
-		this.subject = subject;
+	public void setCourseName(String courseName) {
+		this.courseName = courseName;
 	}
 
 	public int getCredits() {
@@ -52,7 +56,7 @@ public class Course implements Serializable {
 
 	public String toString() {
 		return "\n   Course Code : " + getCourseCode() + " | Course: "
-				+ getSubject() + " | Credits: " + getCredits() + "\n   Marks: " + getMarks();
+				+ getCourseName() + " | Credits: " + getCredits() + "\n   Marks: " + getMarks();
 	}
 
 }

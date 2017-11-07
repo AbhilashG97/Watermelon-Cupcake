@@ -2,15 +2,15 @@ package display;
 
 public class NewDiaryDisplay {
 
-    public static void displaySetStudentDetailsPage() {
+    public static void displayStudentDetailsPage() {
         System.out.println("******************** STUDENT DETAILS PAGE ********************");
     }
 
-    public static void diaplaySetCourseDeailsPage() {
+    public static void diaplayCourseDeailsPage() {
         System.out.println("******************** COURSE DETAILS PAGE ********************");
     }
 
-    public static void displaySetMarksPage() {
+    public static void displayMarksPage() {
         System.out.println("******************** MARKS PAGE ********************");
     }
 
@@ -30,15 +30,19 @@ public class NewDiaryDisplay {
         System.out.println("Enter the course code of the course you want to study");
     }
 
-    public static void displaySetSubjectMessage() {
+    public static void displaySetCourseNameMessage() {
         System.out.println("Enter the name of the course you want to enroll in");
+    }
+
+    public static void displaySetNumberOfCourses(){
+        System.out.println("Enter the number of courses the student wants to take");
     }
 
     public static void displaySetCreditsMessage() {
         System.out.println("Please set the credits for this course");
     }
 
-    public static void displaySetFirstInternalsMaarksMessage() {
+    public static void displaySetFirstInternalsMarksMessage() {
         System.out.println("Enter first periodical marks");
     }
 

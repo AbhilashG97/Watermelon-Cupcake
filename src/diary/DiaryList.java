@@ -13,4 +13,5 @@ public class DiaryList {
     public ArrayList<Diary> getDiaryList() {
         return diaryList;
     }
+
 }
