@@ -1,4 +1,4 @@
-package student.nonAcademic;
+package student;
 
 public class Seminars {
     private int noOfSeminarsAttended;

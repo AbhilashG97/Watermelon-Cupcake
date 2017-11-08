@@ -1,9 +1,5 @@
 package student;
 
-import student.acadamics.Course;
-import student.acadamics.Marks;
-import student.acadamics.Student;
-
 import java.util.ArrayList;
 
 public class Test {

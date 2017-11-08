@@ -1,9 +1,10 @@
-package student.nonAcademic;
+package student;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Volunteering {
+public class EventName{
+
     ArrayList<String> eventNames = new ArrayList<>();
 
     public void setEventName(String name) {

@@ -1,4 +1,4 @@
-package student.nonAcademic;
+package student;
 
 import java.util.ArrayList;
 import java.util.Iterator;

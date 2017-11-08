@@ -1,6 +1,6 @@
 package diary;
 
-import student.acadamics.Student;
+import student.Student;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

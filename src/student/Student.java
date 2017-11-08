@@ -1,4 +1,4 @@
-package student.acadamics;
+package student;
 
 import java.io.*;
 import java.util.*;
@@ -8,6 +8,7 @@ public class Student implements Serializable, Comparable<Student> {
 	private String rollNumber;
 	private String batch;
 	public ArrayList<Course> coursesTaken = new ArrayList<>();
+
 
 	public Student(){
 		//Default Constructor

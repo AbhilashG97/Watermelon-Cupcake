@@ -1,4 +1,4 @@
-package student.nonAcademic;
+package student;
 
 public class Internships {
     private int noOfInternships;

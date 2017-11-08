@@ -62,4 +62,9 @@ public class NewDiaryDisplay {
         System.out.println("Enter end semester examination marks");
     }
 
+    public static void displaySetArrears(){
+        System.out.println("Enter the subjects in which the student has arrears");
+    }
+
+
 }

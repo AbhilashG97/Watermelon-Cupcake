@@ -1,9 +1,9 @@
 package diary;
 
 import display.NewDiaryDisplay;
-import student.acadamics.Course;
-import student.acadamics.Marks;
-import student.acadamics.Student;
+import student.Course;
+import student.Marks;
+import student.Student;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -75,6 +75,28 @@ public class Diary {
         return marks;
     }
 
+    public Student setAllStudentDetails(Student student) throws Exception {
+        NewDiaryDisplay.displayStudentDetailsPage();
+
+        NewDiaryDisplay.displaySetNameMessage();
+        student.setName(bfr.readLine());
+
+        NewDiaryDisplay.displaySetRollNoMessage();
+        student.setRollNumber(bfr.readLine());
+
+        NewDiaryDisplay.displaySetBatchMessage();
+        student.setBatch(bfr.readLine());
+
+        NewDiaryDisplay.displaySetNumberOfCourses();
+        numberOfCourses = Integer.parseInt(bfr.readLine().trim());
+
+        while (numberOfCourses-- > 0) {
+            student.addCourseToCourseList(setCourseToBeTaken());
+        }
+
+        return student;
+    }
+
     public Student setAllStudentDetails() throws Exception {
         student = new Student();
         NewDiaryDisplay.displayStudentDetailsPage();
@@ -97,6 +119,7 @@ public class Diary {
 
         return student;
     }
+
 
     public void displayAllStudentDetails(Student student){
         System.out.println(student.toString());
