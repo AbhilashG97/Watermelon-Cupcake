@@ -15,7 +15,7 @@ public class Student implements Serializable, Comparable<Student> {
 
 	public Student(String name, String rollNo, String batch, ArrayList<Course> courseList) {
 		this.name = name;
-		this.rollNumber = rollNo.replaceAll(".", "").substring(8);
+		this.rollNumber = rollNo.replaceAll(".", "").substring(9);
 		this.batch = batch;
 		coursesTaken.addAll(courseList);
 	}

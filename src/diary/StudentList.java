@@ -32,13 +32,13 @@ public class StudentList {
 
     public void writeToFile() throws Exception{
         ObjectOutputStream oos = new ObjectOutputStream(
-                new FileOutputStream("I:\\eclipse-workspace\\Watermelon-Cupcake\\files\\studentList"));
+                new FileOutputStream("I:\\eclipse-workspace\\Watermelon-Cupcake\\data\\studentList"));
         oos.writeObject(getStudentList());
     }
 
     public ArrayList<Student> readFromFile() throws Exception{
         ObjectInputStream ois = new ObjectInputStream(
-                new FileInputStream("I:\\eclipse-workspace\\Watermelon-Cupcake\\files\\studentList"));
+                new FileInputStream("I:\\eclipse-workspace\\Watermelon-Cupcake\\data\\studentList"));
         ArrayList<Student> studentList = (ArrayList<Student>) ois.readObject();
         return studentList;
     }
