@@ -1,8 +1,9 @@
 package main;
 
-import diary.Diary;
+import diary.StudentAssimilator;
 import diary.StudentList;
 import display.ExistingDiaryDisplay;
+import display.NewDiaryDisplay;
 import display.WelcomePage;
 import student.Student;
 
@@ -22,7 +23,7 @@ public class StudentDiary {
     }
 
     public static boolean checkInput(int input) {
-        if (input > 2 || input < 0) {
+        if (input > 4 || input < 0) {
             return true;
         } else {
             return false;
@@ -33,7 +34,7 @@ public class StudentDiary {
         Student student;
         StudentList studentList = new StudentList();
         StudentDiary studentDiary = new StudentDiary();
-        Diary diary = new Diary();
+        StudentAssimilator assimilator = new StudentAssimilator();
         Scanner scanner = new Scanner(System.in);
         WelcomePage.sayHello();
         WelcomePage.selectDiaryTypeMessage();
@@ -42,29 +43,55 @@ public class StudentDiary {
 
         switch (studentDiary.getDiaryType()) {
             case 1:
-                student = diary.setAllStudentDetails();
-                studentList.addToStudentList(student);
-                studentList.writeToFile();
-                diary.displayAllStudentDetails(studentList.getStudent(0));
+                NewDiaryDisplay.displayNumberOfStudentsToBeCreated();
+                int numberOfStudentsToBeCreated = scanner.nextInt();
+                while(numberOfStudentsToBeCreated-->0){
+                    student = assimilator.setAllStudentDetails();
+                    studentList.addToStudentList(student);
+                    studentList.writeToFile();
+                }
                 break;
             case 2:
                 ArrayList<Student> stuList = studentList.readFromFile();
-                Collections.sort(stuList);
-                for (Student iterator : stuList) {
-                    //diary.displayAllStudentDetails(iterator);
-                    System.out.println(iterator.getRollNumber());
-                }
-                ExistingDiaryDisplay.selectStudentRollNumber();
-                studentDiary.setSelectedStudentRollNumber(scanner.nextInt());
-
-                for (Student iterator : stuList) {
-                    if(Integer.parseInt(iterator.getRollNumber()) == studentDiary.getSelectedStudentRollNumber()){
-                        studentDiary.selectedStudent = iterator;
+                if(stuList.isEmpty()){
+                    System.err.println("Currently, there are no students registered");
+                }else{
+                    Collections.sort(stuList);
+                    for (Student iterator : stuList) {
+                        //diary.displayAllStudentDetails(iterator);
+                        System.out.println(iterator.getRollNumber());
                     }
-                }
+                    ExistingDiaryDisplay.selectStudentRollNumber();
+                    studentDiary.setSelectedStudentRollNumber(scanner.nextInt());
 
-                ExistingDiaryDisplay.displayModificationPage();
-                diary.setAllStudentDetails(studentDiary.selectedStudent);
+                    for (Student iterator : stuList) {
+                        if(Integer.parseInt(iterator.getRollNumber()) == studentDiary.getSelectedStudentRollNumber()){
+                            studentDiary.selectedStudent = iterator;
+                        }
+                    }
+
+                    ExistingDiaryDisplay.displayModificationPage();
+                    System.out.println();
+                    assimilator.setAllStudentDetails(studentDiary.selectedStudent);
+                    studentList.writeToFile(stuList);
+                }
+                break;
+            case 3:
+                ArrayList<Student> displayStudentList = studentList.readFromFile();
+                Collections.sort(displayStudentList);
+                for (Student iterator : displayStudentList) {
+                    assimilator.displayAllStudentDetails(iterator);
+                }
+                break;
+            case 4:
+                ArrayList<Student> deleteStudentList = studentList.readFromFile();
+                Collections.sort(deleteStudentList);
+                int index = 0;
+                for (Student iterator : deleteStudentList) {
+                    System.out.println(index + " -> " + iterator.getName());
+                }
+                deleteStudentList.remove(index);
+                studentList.writeToFile(deleteStudentList);
                 break;
         }
     }
@@ -86,7 +113,7 @@ public class StudentDiary {
         while (true) {
             diaryType = scanner.nextInt();
             if (checkInput(diaryType)) {
-                System.err.println("Please enter 1 or 2");
+                System.err.println("Please select a suitable option");
             } else {
                 break;
             }

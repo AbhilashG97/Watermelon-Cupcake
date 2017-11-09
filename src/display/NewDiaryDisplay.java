@@ -6,7 +6,7 @@ public class NewDiaryDisplay {
         System.out.println("******************** STUDENT DETAILS PAGE ********************");
     }
 
-    public static void diaplayCourseDeailsPage() {
+    public static void displayCourseDetailsPage() {
         System.out.println("******************** COURSE DETAILS PAGE ********************");
     }
 
@@ -14,24 +14,28 @@ public class NewDiaryDisplay {
         System.out.println("******************** MARKS PAGE ********************");
     }
 
+    public static void displayNumberOfStudentsToBeCreated(){
+        System.out.println("Please enter the number of students you want to create");
+    }
+
     public static void displaySetNameMessage() {
-        System.out.println("Enter your full name");
+        System.out.println("Enter student's full name");
     }
 
     public static void displaySetRollNoMessage() {
-        System.out.println("Enter your roll number");
+        System.out.println("Enter student's roll number");
     }
 
     public static void displaySetBatchMessage() {
-        System.out.println("Enter your batch");
+        System.out.println("Enter student's batch");
     }
 
     public static void displaySetCourseCodeMessage() {
-        System.out.println("Enter the course code of the course you want to study");
+        System.out.println("Enter the course code of the course the student has opted for");
     }
 
     public static void displaySetCourseNameMessage() {
-        System.out.println("Enter the name of the course you want to enroll in");
+        System.out.println("Enter the name of the course the student wants to enroll in");
     }
 
     public static void displaySetNumberOfCourses(){
@@ -51,7 +55,7 @@ public class NewDiaryDisplay {
     }
 
     public static void displaySetAttendanceMessage() {
-        System.out.println("Enter attendance");
+        System.out.println("Enter marks achieved for attendance");
     }
 
     public static void displaySetContinuousEvaluationMarksMessage() {
@@ -65,6 +69,7 @@ public class NewDiaryDisplay {
     public static void displaySetArrears(){
         System.out.println("Enter the subjects in which the student has arrears");
     }
+
 
 
 }

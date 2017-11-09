@@ -36,6 +36,12 @@ public class StudentList {
         oos.writeObject(getStudentList());
     }
 
+    public void writeToFile(ArrayList<Student> studentList) throws Exception{
+        ObjectOutputStream oos = new ObjectOutputStream(
+                new FileOutputStream("I:\\eclipse-workspace\\Watermelon-Cupcake\\data\\studentList"));
+        oos.writeObject(studentList);
+    }
+
     public ArrayList<Student> readFromFile() throws Exception{
         ObjectInputStream ois = new ObjectInputStream(
                 new FileInputStream("I:\\eclipse-workspace\\Watermelon-Cupcake\\data\\studentList"));

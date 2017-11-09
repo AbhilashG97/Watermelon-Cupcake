@@ -8,7 +8,7 @@ import student.Student;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class Diary {
+public class StudentAssimilator {
 
     private Student student;
     private Course course;
@@ -18,7 +18,7 @@ public class Diary {
     private Marks marks;
     private BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
 
-    public Diary() {
+    public StudentAssimilator() {
         student = null;
         course = null;
         marks = null;
@@ -32,7 +32,7 @@ public class Diary {
     public Course setCourseToBeTaken() throws Exception {
         course = new Course();
 
-        NewDiaryDisplay.diaplayCourseDeailsPage();
+        NewDiaryDisplay.displayCourseDetailsPage();
 
         NewDiaryDisplay.displaySetCourseNameMessage();
         course.setCourseName(bfr.readLine());
@@ -43,7 +43,7 @@ public class Diary {
         NewDiaryDisplay.displaySetCreditsMessage();
         course.setCredits(Integer.parseInt(bfr.readLine()));
 
-        course.setMarks(setMarksOfCoursesTaken());
+        course.setMarks(setAllMarksToZero());
 
         return course;
     }
@@ -71,6 +71,19 @@ public class Diary {
 
         NewDiaryDisplay.displaySetAttendanceMessage();
         marks.setAttendance(Double.parseDouble(bfr.readLine()));
+
+        return marks;
+    }
+
+    public Marks setAllMarksToZero(){
+
+        marks = new Marks();
+
+        marks.setFirstInternals(0.0);
+        marks.setSecondInternals(0.0);
+        marks.setEndSem(0.0);
+        marks.setContinuousEvaluationMarks(0.0);
+        marks.setAttendance(0.0);
 
         return marks;
     }
