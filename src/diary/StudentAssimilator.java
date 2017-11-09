@@ -151,17 +151,17 @@ public class StudentAssimilator {
     public Arrears setArrearDetails() throws Exception {
         arrears = new Arrears();
 
-        NewDiaryDisplay.displayArrearsPage();
-
         NewDiaryDisplay.setNumberOfArrearsMessage();
         arrears.setNumberOfArrears(Integer.parseInt(bfr.readLine()));
 
         int numberOfArrears = arrears.getNumberOfArrears();
 
-        NewDiaryDisplay.setArrearsSubjectMessage();
 
-        while (numberOfArrears-- > 0) {
-            arrears.setArrearSubjects(bfr.readLine());
+        if(numberOfArrears!=0){
+            NewDiaryDisplay.setArrearsSubjectMessage();
+            while (numberOfArrears-- > 0) {
+                arrears.setArrearSubjects(bfr.readLine());
+            }
         }
 
         return arrears;
@@ -177,15 +177,17 @@ public class StudentAssimilator {
 
         int numberOfInternships = internships.getNumberOfInternships();
 
-        NewDiaryDisplay.setNameOfInterningOrganizationMessage();
-        while (numberOfInternships-- > 0) {
-            internships.setListOfInternships(bfr.readLine());
+        if(numberOfInternships!=0){
+            NewDiaryDisplay.setNameOfInterningOrganizationMessage();
+            while (numberOfInternships-- > 0) {
+                internships.setListOfInternships(bfr.readLine());
+            }
         }
 
         return internships;
     }
 
-    public Projects setAllProjecDetails() throws IOException {
+    public Projects setAllProjectDetails() throws IOException {
         projects = new Projects();
 
         NewDiaryDisplay.displayProjectsPage();
@@ -195,10 +197,13 @@ public class StudentAssimilator {
 
         int numberOfProjects = projects.getNumberOfProjects();
 
-        NewDiaryDisplay.setProjectNameMessage();
-        while (numberOfProjects-- > 0) {
-            projects.setProjectNames(bfr.readLine());
+        if(numberOfProjects!=0){
+            NewDiaryDisplay.setProjectNameMessage();
+            while (numberOfProjects-- > 0) {
+                projects.setProjectNames(bfr.readLine());
+            }
         }
+
         return projects;
     }
 
@@ -228,10 +233,14 @@ public class StudentAssimilator {
 
         int numberOfEventsParticipated = sports.getNumberOfEventsParticipated();
 
-        NewDiaryDisplay.setEventNameMessage();
-        while (numberOfEventsParticipated-- > 0) {
-            sports.setEventNames(bfr.readLine());
+
+        if(numberOfEventsParticipated!=0){
+            NewDiaryDisplay.setEventNameMessage();
+            while (numberOfEventsParticipated-- > 0) {
+                sports.setEventNames(bfr.readLine());
+            }
         }
+
 
         NewDiaryDisplay.setNumberOfGoldMedalsWonMessage();
         sports.setNumberOfGoldMedalsWon(Integer.parseInt(bfr.readLine()));
@@ -253,10 +262,13 @@ public class StudentAssimilator {
 
         int suspensionCount = suspensions.getSuspensionCount();
 
-        NewDiaryDisplay.setRearsonForSuspensionMessage();
-        while (suspensionCount-- > 0) {
-            suspensions.setReasonOfSuspensionList(bfr.readLine());
+        if(suspensionCount!=0){
+            NewDiaryDisplay.setRearsonForSuspensionMessage();
+            while (suspensionCount-- > 0) {
+                suspensions.setReasonOfSuspensionList(bfr.readLine());
+            }
         }
+
 
         return suspensions;
     }
@@ -265,16 +277,20 @@ public class StudentAssimilator {
         volunteering = new Volunteering();
 
         NewDiaryDisplay.displayVolunterringPage();
-        
+
         NewDiaryDisplay.setNumberOfEventsVolunteeredMessage();
         volunteering.setNumberOfEventsVolunteered(Integer.parseInt(bfr.readLine()));
 
+        NewDiaryDisplay.setNameOfEventVolunteeredMessage();
         int numberOfEventsVolunteered = volunteering.getNumberOfEventsVolunteered();
 
-        NewDiaryDisplay.setNameOfEventVolunteeredMessage();
-        while (numberOfEventsVolunteered-- > 0) {
-            volunteering.setVolunteeredEvents(bfr.readLine());
+        if(numberOfEventsVolunteered != 0){
+            NewDiaryDisplay.setNameOfEventVolunteeredMessage();
+            while (numberOfEventsVolunteered-- > 0) {
+                volunteering.setVolunteeredEvents(bfr.readLine());
+            }
         }
+
         return volunteering;
     }
 
@@ -292,7 +308,7 @@ public class StudentAssimilator {
 
         nonAcademics.setDisciplinary(setDisciplinaryDetails());
         nonAcademics.setInternships(setAllInternshipDetails());
-        nonAcademics.setProject(setAllProjecDetails());
+        nonAcademics.setProject(setAllProjectDetails());
         nonAcademics.setSeminar(setAllSeminarDetails());
         nonAcademics.setSports(setAllSportDetails());
         nonAcademics.setVolunteering(setAllVolunteeringDetails());

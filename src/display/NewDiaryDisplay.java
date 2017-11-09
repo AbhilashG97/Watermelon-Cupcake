@@ -20,10 +20,6 @@ public class NewDiaryDisplay {
         System.out.println();
     }
 
-    public static void displayArrearsPage(){
-        System.out.println("******************** STUDENT ARREARS PAGE ********************\n");
-    }
-
     public static void displayDisciplinaryPage(){
         System.out.println("******************** STUDENT DISCIPLINARY PAGE ********************\n");
     }
@@ -108,7 +104,7 @@ public class NewDiaryDisplay {
     }
 
     public static void setSuspensionCountMessage(){
-        System.out.println("Enter the number of time the student got suspended.");
+        System.out.println("Enter the number of times the student got suspended.");
     }
 
     public static void setRearsonForSuspensionMessage(){
@@ -124,15 +120,15 @@ public class NewDiaryDisplay {
     }
 
     public static void setNumberOfProjectCompletedMessage(){
-       System.out.println("Enter the number of project the student worked on.");
+       System.out.println("Enter the number of project(s) the student worked on.");
     }
 
     public static void setProjectNameMessage(){
-        System.out.println("Enter the name of the project on which the student worked on.");
+        System.out.println("Enter the name of the project(s) on which the student worked on.");
     }
 
     public static void setNumberOfSeminarsAttededMessage(){
-        System.out.println("Enter the number of seminars the student attended");
+        System.out.println("Enter the number of seminars the student has attended");
     }
 
     public static void setNumberOfSeminarsTakenMessage(){
@@ -144,7 +140,7 @@ public class NewDiaryDisplay {
     }
 
     public static void setNumberOfGoldMedalsWonMessage(){
-        System.out.println("Enter the number of gold medals won the student");
+        System.out.println("Enter the number of gold medals won by the student");
     }
 
     public static void setNumberOfSilverMedalsWonMessage(){
@@ -152,7 +148,7 @@ public class NewDiaryDisplay {
     }
 
     public static void setNumberOfBronzeMedalsWonMessage(){
-        System.out.println("Enter the number of bronze medals won the student");
+        System.out.println("Enter the number of bronze medals won by the student");
     }
 
     public static void setNumberOfEventsParticiptedMessage(){

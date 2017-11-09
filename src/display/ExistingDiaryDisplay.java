@@ -16,7 +16,7 @@ public class ExistingDiaryDisplay {
 
 
     public static void displayDeleteStudentMessage(){
-        System.out.println("Enter the index of the student that you want to display");
+        System.out.println("Enter the index of the student that you want to delete");
     }
 
 }
