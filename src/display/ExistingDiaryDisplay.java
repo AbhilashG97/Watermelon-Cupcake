@@ -14,6 +14,9 @@ public class ExistingDiaryDisplay {
         System.out.println("************************* MODIFICATION PAGE *************************");
     }
 
-    //public static void
+
+    public static void displayDeleteStudentMessage(){
+        System.out.println("Enter the index of the student that you want to display");
+    }
 
 }

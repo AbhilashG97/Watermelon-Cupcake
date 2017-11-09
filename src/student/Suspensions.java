@@ -1,29 +1,31 @@
 package student;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class Suspensions {
-    ArrayList<String> reasonOfSuspension = new ArrayList<>();
-    private int noOfSuspensions;
+
+    private ArrayList<String> reasonOfSuspensionList;
+    private int suspensionCount;
 
     public Suspensions() {
-        noOfSuspensions = 0;
+        reasonOfSuspensionList = new ArrayList<>();
+        suspensionCount = 0;
     }
 
-    public void setNoOfSuspensions(int n) {
-        this.noOfSuspensions = n;
+    public ArrayList<String> getReasonOfSuspensionList() {
+        return reasonOfSuspensionList;
     }
 
-    public int getNoOfSuspentions() {
-        return this.noOfSuspensions;
+    public void setReasonOfSuspensionList(String reasonForSuspension) {
+        reasonOfSuspensionList.add(reasonForSuspension);
     }
 
-    public void reasonOfSuspention() {
-        Iterator it = reasonOfSuspension.iterator();
-        while (it.hasNext()) {
-            System.out.println(it.next());
-        }
-
+    public int getSuspensionCount() {
+        return suspensionCount;
     }
+
+    public void setSuspensionCount(int suspensionCount) {
+        this.suspensionCount = suspensionCount;
+    }
+
 }

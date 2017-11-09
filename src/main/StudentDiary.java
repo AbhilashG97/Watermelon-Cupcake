@@ -89,8 +89,10 @@ public class StudentDiary {
                 int index = 0;
                 for (Student iterator : deleteStudentList) {
                     System.out.println(index + " -> " + iterator.getName());
+                    index++;
                 }
-                deleteStudentList.remove(index);
+                ExistingDiaryDisplay.displayDeleteStudentMessage();
+                deleteStudentList.remove(scanner.nextInt());
                 studentList.writeToFile(deleteStudentList);
                 break;
         }

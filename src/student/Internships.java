@@ -1,13 +1,15 @@
 package student;
 
 public class Internships {
-    private int noOfInternships;
 
-    public int getNoOfInternshpsDone() {
-        return (this.noOfInternships);
+    private int numberOfInternships;
+
+    public int getNumberOfInternships() {
+        return numberOfInternships;
     }
 
-    public void setNoOfInternshpsDone(int n) {
-        this.noOfInternships = n;
+    public void setNumberOfInternships(int numberOfInternships) {
+        this.numberOfInternships = numberOfInternships;
     }
+
 }
