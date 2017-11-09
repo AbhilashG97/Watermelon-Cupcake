@@ -1,22 +1,29 @@
 package student;
 
 public class Seminars {
-    private int noOfSeminarsAttended;
-    private int noOfSeminarsTaken;
 
-    public int getNoOfSeminarsAttended() {
-        return this.noOfSeminarsAttended;
+    private int numberOfSeminarsAttended;
+    private int numberOfSeminarsTaken;
+
+    public int getNumberOfSeminarsAttended() {
+        return numberOfSeminarsAttended;
     }
 
-    public void setNoOfSeminarsAttended(int n) {
-        this.noOfSeminarsAttended = n;
+    public void setNumberOfSeminarsAttended(int numberOfSeminarsAttended) {
+        this.numberOfSeminarsAttended = numberOfSeminarsAttended;
     }
 
-    public int getNoOfSeminarsTaken() {
-        return this.noOfSeminarsAttended;
+    public int getNumberOfSeminarsTaken() {
+        return numberOfSeminarsTaken;
     }
 
-    public void setNoOfSeminarsTaken(int n) {
-        this.noOfSeminarsAttended = n;
+    public void setNumberOfSeminarsTaken(int numberOfSeminarsTaken) {
+        this.numberOfSeminarsTaken = numberOfSeminarsTaken;
     }
+
+    @Override
+    public String toString(){
+        return numberOfSeminarsAttended + " " + numberOfSeminarsTaken;
+    }
+
 }

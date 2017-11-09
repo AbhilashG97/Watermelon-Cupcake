@@ -1,21 +1,18 @@
 package student;
 
-import com.sun.xml.internal.ws.api.ha.StickyFeature;
-
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class Arrears {
 
-    ArrayList<String> arrearSubjects = new ArrayList<>();
-    private int noOfArrears;
+    private ArrayList<String> arrearSubjects = new ArrayList<>();
+    private int numberOfArrears;
 
-    public int getNoOfArrears() {
-        return noOfArrears;
+    public int getNumberOfArrears() {
+        return numberOfArrears;
     }
 
-    public void setNoOfArrears(int noOfArrears) {
-        this.noOfArrears = noOfArrears;
+    public void setNumberOfArrears(int numberOfArrears) {
+        this.numberOfArrears = numberOfArrears;
     }
 
     public ArrayList<String> getArrearSubjects() {
@@ -24,14 +21,5 @@ public class Arrears {
 
     public void setArrearSubjects(String course) {
         arrearSubjects.add(course);
-    }
-
-    public void printSubjetcArrears() {
-
-        System.out.println();
-
-        for (String iterator : arrearSubjects) {
-            System.out.println(iterator);
-        }
     }
 }

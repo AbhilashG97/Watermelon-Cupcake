@@ -1,75 +1,60 @@
 package student;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
-public class Sports extends EventName{
-    ArrayList<String> eventName = new ArrayList<>();
+public class Sports {
 
-    public int getGold() {
-        return gold;
-    }
-
-    public void setGold(int gold) {
-        this.gold = gold;
-    }
-
-    public int getSilver() {
-        return silver;
-    }
-
-    public void setSilver(int silver) {
-        this.silver = silver;
-    }
-
-    public int getBronze() {
-        return bronze;
-    }
-
-    public void setBronze(int bronze) {
-        this.bronze = bronze;
-    }
-
-    public int getParticipation() {
-        return participation;
-    }
-
-    public void setParticipation(int participation) {
-        this.participation = participation;
-    }
-
-    private int gold;
-    private int silver;
-    private int bronze;
-    private int participation;
+    ArrayList<String> eventNames;
+    private int numberOfGoldMedalsWon;
+    private int numberOfSilverMedalsWon;
+    private int numberOfBronzeMedalsWon;
+    private int numberOfEventsParticipated;
 
     public Sports() {
-        gold = 0;
-        silver = 0;
-        bronze = 0;
-        participation = 0;
+        eventNames = new ArrayList<>();
+        numberOfGoldMedalsWon = 0;
+        numberOfSilverMedalsWon = 0;
+        numberOfBronzeMedalsWon = 0;
+        numberOfEventsParticipated = 0;
     }
 
-    public void setMedals(char c, int n) {
-        if (c == 'B')
-            bronze++;
-        else if (c == 'G')
-            gold++;
-        else if (c == 'S')
-            silver++;
-        else
-            participation++;
+    public int getNumberOfGoldMedalsWon() {
+        return numberOfGoldMedalsWon;
     }
 
-    public void setEventName(String s) {
-        eventName.add(s);
+    public void setNumberOfGoldMedalsWon(int numberOfGoldMedalsWon) {
+        this.numberOfGoldMedalsWon = numberOfGoldMedalsWon;
     }
 
-    public void printEventName() {
-        Iterator it = eventName.iterator();
-        while (it.hasNext()) {
-            System.out.println(it.next());
-        }
+    public int getNumberOfSilverMedalsWon() {
+        return numberOfSilverMedalsWon;
+    }
 
+    public void setNumberOfSilverMedalsWon(int numberOfSilverMedalsWon) {
+        this.numberOfSilverMedalsWon = numberOfSilverMedalsWon;
+    }
+
+    public int getNumberOfBronzeMedalsWon() {
+        return numberOfBronzeMedalsWon;
+    }
+
+    public void setNumberOfBronzeMedalsWon(int numberOfBronzeMedalsWon) {
+        this.numberOfBronzeMedalsWon = numberOfBronzeMedalsWon;
+    }
+
+    public int getNumberOfEventsParticipated() {
+        return numberOfEventsParticipated;
+    }
+
+    public void setNumberOfEventsParticipated(int numberOfEventsParticipated) {
+        this.numberOfEventsParticipated = numberOfEventsParticipated;
+    }
+
+    public void setEventNames(String eventName) {
+        eventNames.add(eventName);
+    }
+
+    public ArrayList<String> getEventNames() {
+        return eventNames;
     }
 }

@@ -1,8 +1,8 @@
 package student;
 
 public class Disciplinary {
-    Arrears arrears;
-    Suspensions suspensions;
+    private Arrears arrears;
+    private Suspensions suspensions;
 
     public Arrears getArrears() {
         return arrears;

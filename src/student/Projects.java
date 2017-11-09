@@ -1,29 +1,37 @@
 package student;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class Projects {
-    ArrayList<String> projectNames = new ArrayList<String>();
-    private int prj;
 
-    public void setNameOfProjects(String name) {
-        projectNames.add(name);
+    private ArrayList<String> projectNames;
+    private int numberOfProjects;
+
+    public Projects(){
+        projectNames = new ArrayList<>();
+        numberOfProjects = 0;
     }
 
-    public int getNoOfProjects() {
-        return this.prj;
+    public ArrayList<String> getProjectNames() {
+        return projectNames;
     }
 
-    public void setNoOfProjects(int n) {
-        this.prj = n;
+    public void setProjectNames(String projectName) {
+        projectNames.add(projectName);
     }
 
-    public void printNameOfProjects() {
-        Iterator it = projectNames.iterator();
-        while (it.hasNext()) {
-            System.out.println(it.next());
+    public int getNumberOfProjects() {
+        return numberOfProjects;
+    }
+
+    public void setNumberOfProjects(int numberOfProjects) {
+        this.numberOfProjects = numberOfProjects;
+    }
+
+    public void displayProjectNames(){
+        for(String iterator : projectNames){
+            System.out.println(iterator);
         }
-
     }
+
 }

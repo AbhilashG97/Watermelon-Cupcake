@@ -9,10 +9,6 @@ public class NonAcademics {
         private Internships internships;
         private Disciplinary disciplinary;
 
-        public NonAcademics() {
-
-        }
-
         public Sports getSports() {
                 return sports;
         }
