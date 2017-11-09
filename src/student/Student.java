@@ -5,93 +5,92 @@ import java.util.*;
 
 public class Student implements Serializable, Comparable<Student> {
 
-	public NonAcademics getNonAcademics() {
-		return nonAcademics;
-	}
+    public ArrayList<Course> coursesTaken = new ArrayList<>();
+    private NonAcademics nonAcademics;
+    private String name;
+    private String rollNumber;
+    private String batch;
 
-	public void setNonAcademics(NonAcademics nonAcademics) {
-		this.nonAcademics = nonAcademics;
-	}
+    public Student() {
+        //Default Constructor
+    }
 
-	public ArrayList<Course> getCoursesTaken() {
-		return coursesTaken;
-	}
+    public Student(String name, String rollNo, String batch, ArrayList<Course> courseList,
+                   NonAcademics nonAcademics) {
+        this.name = name;
+        this.rollNumber = rollNo.replaceAll(".", "").substring(9);
+        this.batch = batch;
+        this.nonAcademics = nonAcademics;
+        coursesTaken.addAll(courseList);
+    }
 
-	public void setCoursesTaken(ArrayList<Course> coursesTaken) {
-		this.coursesTaken = coursesTaken;
-	}
+    public NonAcademics getNonAcademics() {
+        return nonAcademics;
+    }
 
-	private NonAcademics nonAcademics;
-	private String name;
-	private String rollNumber;
-	private String batch;
-	public ArrayList<Course> coursesTaken = new ArrayList<>();
+    public void setNonAcademics(NonAcademics nonAcademics) {
+        this.nonAcademics = nonAcademics;
+    }
 
+    public ArrayList<Course> getCoursesTaken() {
+        return coursesTaken;
+    }
 
-	public Student(){
-		//Default Constructor
-	}
+    public void setCoursesTaken(ArrayList<Course> coursesTaken) {
+        this.coursesTaken = coursesTaken;
+    }
 
-	public Student(String name, String rollNo, String batch, ArrayList<Course> courseList,
-				   NonAcademics nonAcademics) {
-		this.name = name;
-		this.rollNumber = rollNo.replaceAll(".", "").substring(9);
-		this.batch = batch;
-		this.nonAcademics = nonAcademics;
-		coursesTaken.addAll(courseList);
-	}
+    public void addCourseToCourseList(Course course) {
+        coursesTaken.add(course);
+    }
 
-	public void addCourseToCourseList(Course course){
-		coursesTaken.add(course);
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getRollNumber() {
+        return rollNumber;
+    }
 
-	public String getRollNumber() {
-		return rollNumber;
-	}
+    public void setRollNumber(String rollNumber) {
+        this.rollNumber = rollNumber.substring(12);
+    }
 
-	public void setRollNumber(String rollNumber) {
-		this.rollNumber = rollNumber.substring(12);
-	}
+    public String getBatch() {
+        return batch;
+    }
 
-	public String getBatch() {
-		return batch;
-	}
+    public void setBatch(String batch) {
+        this.batch = batch;
+    }
 
-	public void setBatch(String batch) {
-		this.batch = batch;
-	}
+    public ArrayList<Course> getCourses() {
+        return coursesTaken;
+    }
 
-	public ArrayList<Course> getCourses() {
-		return coursesTaken;
-	}
+    public void setCourses(ArrayList<Course> c) {
+        coursesTaken.addAll(c);
+    }
 
-	public void setCourses(ArrayList<Course> c) {
-		coursesTaken.addAll(c);
-	}
+    @Override
+    public String toString() {
+        return "Student Name : " + getName() + "\nRoll Number : " + getRollNumber() +
+                "\nBatch : " + getBatch() + "\nCourses : " + getCourses();
+    }
 
-	@Override
-	public String toString(){
-		return "Student Name : " + getName() + "\nRoll Number : " + getRollNumber() +
-				"\nBatch : " + getBatch() + "\nCourses : " +getCourses();
-	}
+    @Override
+    public int compareTo(Student student) {
 
-	@Override
-	public int compareTo(Student student) {
-
-		if(Integer.parseInt(rollNumber) == Integer.parseInt(student.rollNumber)){
-			return 0;
-		}else if(Integer.parseInt(rollNumber) > Integer.parseInt(student.rollNumber)){
-			return 1;
-		}else{
-			return -1;
-		}
-	}
+        if (Integer.parseInt(rollNumber) == Integer.parseInt(student.rollNumber)) {
+            return 0;
+        } else if (Integer.parseInt(rollNumber) > Integer.parseInt(student.rollNumber)) {
+            return 1;
+        } else {
+            return -1;
+        }
+    }
 }

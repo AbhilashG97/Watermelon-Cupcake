@@ -18,6 +18,10 @@ public class NewDiaryDisplay {
         System.out.println("******************** NON ACADEMICS PAGE ********************");
     }
 
+    public static void displayArrearsPage(){
+        System.out.println("******************** STUDENT ARREARS PAGE ********************");
+    }
+
     public static void displayNumberOfStudentsToBeCreated(){
         System.out.println("Please enter the number of students you want to add to the diary");
     }
