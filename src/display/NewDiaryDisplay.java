@@ -14,8 +14,12 @@ public class NewDiaryDisplay {
         System.out.println("******************** MARKS PAGE ********************");
     }
 
+    public static void displayNonAcademicsPage(){
+        System.out.println("******************** NON ACADEMICS PAGE ********************");
+    }
+
     public static void displayNumberOfStudentsToBeCreated(){
-        System.out.println("Please enter the number of students you want to create");
+        System.out.println("Please enter the number of students you want to add to the diary");
     }
 
     public static void displaySetNameMessage() {
@@ -66,10 +70,72 @@ public class NewDiaryDisplay {
         System.out.println("Enter end semester examination marks");
     }
 
-    public static void displaySetArrears(){
+    public static void setArrearsSubjectMessage(){
         System.out.println("Enter the subjects in which the student has arrears");
     }
 
+    public static void setNumberOfArrearsMessage(){
+        System.out.println("Enter the number of arrears the student has");
+    }
 
+    public static void setSuspensionCountMessage(){
+        System.out.println("Enter the number of time the student got suspended.");
+    }
+
+    public static void setRearsonForSuspensionMessage(){
+        System.out.println("Enter the reason for which the student got suspended.");
+    }
+
+    public static void setNumberOfInternshipsMessage(){
+        System.out.println("Enter the total number of internship programs the student has attended");
+    }
+
+    public static void setNameOfInterningOrganizationMessage(){
+        System.out.println("Enter the name of the organization in which the student completed their internship");
+    }
+
+    public static void setNumberOfProjectCompletedMessage(){
+       System.out.println("Enter the number of project the student worked on.");
+    }
+
+    public static void setProjectNameMessage(){
+        System.out.println("Enter the name of the project on which the student worked on.");
+    }
+
+    public static void setNumberOfSeminarsAttededMessage(){
+        System.out.println("Enter the number of seminars the student attended");
+    }
+
+    public static void setNumberOfSeminarsTakenMessage(){
+        System.out.println("Enter the number of seminars taken by the student");
+    }
+
+    public static void setEventNameMessage(){
+        System.out.println("Enter the name of the event in which the student participated");
+    }
+
+    public static void setNumberOfGoldMedalsWonMessage(){
+        System.out.println("Enter the number of gold medals won the student");
+    }
+
+    public static void setNumberOfSilverMedalsWonMessage(){
+        System.out.println("Enter the number of silver medals won by the student");
+    }
+
+    public static void setNumberOfBronzeMedalsWonMessage(){
+        System.out.println("Enter the number of bronze medals won the student");
+    }
+
+    public static void setNumberOfEventsParticiptedMessage(){
+        System.out.println("Enter the total number of events in which the student participated");
+    }
+
+    public static void setNumberOfEventsVolunteeredMessage(){
+        System.out.println("Enter the number of events in which the student volunteered");
+    }
+
+    public static void setNameOfEventVolunteeredMessage(){
+        System.out.println("Enter the name of the event for which the student volunteered");
+    }
 
 }

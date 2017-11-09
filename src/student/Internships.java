@@ -7,7 +7,7 @@ public class Internships {
     private int numberOfInternships;
     private ArrayList<String> listOfInternships;
 
-    public Internships(){
+    public Internships() {
         listOfInternships = new ArrayList<>();
         numberOfInternships = 0;
     }
@@ -23,7 +23,6 @@ public class Internships {
     public int getNumberOfInternships() {
         return numberOfInternships;
     }
-
 
     public void setNumberOfInternships(int numberOfInternships) {
         this.numberOfInternships = numberOfInternships;

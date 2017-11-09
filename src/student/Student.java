@@ -4,6 +4,24 @@ import java.io.*;
 import java.util.*;
 
 public class Student implements Serializable, Comparable<Student> {
+
+	public NonAcademics getNonAcademics() {
+		return nonAcademics;
+	}
+
+	public void setNonAcademics(NonAcademics nonAcademics) {
+		this.nonAcademics = nonAcademics;
+	}
+
+	public ArrayList<Course> getCoursesTaken() {
+		return coursesTaken;
+	}
+
+	public void setCoursesTaken(ArrayList<Course> coursesTaken) {
+		this.coursesTaken = coursesTaken;
+	}
+
+	private NonAcademics nonAcademics;
 	private String name;
 	private String rollNumber;
 	private String batch;
@@ -14,10 +32,12 @@ public class Student implements Serializable, Comparable<Student> {
 		//Default Constructor
 	}
 
-	public Student(String name, String rollNo, String batch, ArrayList<Course> courseList) {
+	public Student(String name, String rollNo, String batch, ArrayList<Course> courseList,
+				   NonAcademics nonAcademics) {
 		this.name = name;
 		this.rollNumber = rollNo.replaceAll(".", "").substring(9);
 		this.batch = batch;
+		this.nonAcademics = nonAcademics;
 		coursesTaken.addAll(courseList);
 	}
 

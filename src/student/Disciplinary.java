@@ -1,6 +1,7 @@
 package student;
 
 public class Disciplinary {
+
     private Arrears arrears;
     private Suspensions suspensions;
 

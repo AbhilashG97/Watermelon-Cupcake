@@ -28,10 +28,4 @@ public class Projects {
         this.numberOfProjects = numberOfProjects;
     }
 
-    public void displayProjectNames(){
-        for(String iterator : projectNames){
-            System.out.println(iterator);
-        }
-    }
-
 }
