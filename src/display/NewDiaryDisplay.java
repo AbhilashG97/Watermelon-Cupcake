@@ -16,12 +16,37 @@ public class NewDiaryDisplay {
 
     public static void displayNonAcademicsPage(){
         System.out.println("******************** NON ACADEMICS PAGE ********************");
+        System.out.println("************************************************************");
+        System.out.println();
     }
 
     public static void displayArrearsPage(){
-        System.out.println("******************** STUDENT ARREARS PAGE ********************");
+        System.out.println("******************** STUDENT ARREARS PAGE ********************\n");
     }
 
+    public static void displayDisciplinaryPage(){
+        System.out.println("******************** STUDENT DISCIPLINARY PAGE ********************\n");
+    }
+
+    public static void displayInternshipPage(){
+        System.out.println("******************** STUDENT INTERNSHIP PAGE ********************\n");
+    }
+
+    public static void displayProjectsPage(){
+        System.out.println("******************** STUDENT'S PROJECT(S) PAGE ********************\n");
+    }
+
+    public static void displaySeminarsPage(){
+        System.out.println("******************** SEMINARS PAGE ********************\n");
+    }
+
+    public static void displaySportsPage(){
+        System.out.println("******************** SPORTS PAGE ********************");
+    }
+
+    public static void displayVolunterringPage(){
+        System.out.println("******************** VOLUNTARY SERVICE PAGE ********************");
+    }
     public static void displayNumberOfStudentsToBeCreated(){
         System.out.println("Please enter the number of students you want to add to the diary");
     }

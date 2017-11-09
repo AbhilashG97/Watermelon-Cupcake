@@ -138,6 +138,9 @@ public class StudentAssimilator {
             student.addCourseToCourseList(setCourseToBeTaken());
         }
 
+        NewDiaryDisplay.displayNonAcademicsPage();
+        setAllNonAcademicDetails();
+
         return student;
     }
 
@@ -167,6 +170,8 @@ public class StudentAssimilator {
     public Internships setAllInternshipDetails() throws IOException {
         internships = new Internships();
 
+        NewDiaryDisplay.displayInternshipPage();
+
         NewDiaryDisplay.setNumberOfInternshipsMessage();
         internships.setNumberOfInternships(Integer.parseInt(bfr.readLine()));
 
@@ -183,6 +188,8 @@ public class StudentAssimilator {
     public Projects setAllProjecDetails() throws IOException {
         projects = new Projects();
 
+        NewDiaryDisplay.displayProjectsPage();
+
         NewDiaryDisplay.setNumberOfProjectCompletedMessage();
         projects.setNumberOfProjects(Integer.parseInt(bfr.readLine()));
 
@@ -195,9 +202,11 @@ public class StudentAssimilator {
         return projects;
     }
 
-    public Seminars setAllSeminarDeatails() throws IOException {
+    public Seminars setAllSeminarDetails() throws IOException {
 
         seminars = new Seminars();
+
+        NewDiaryDisplay.displaySeminarsPage();
 
         NewDiaryDisplay.setNumberOfSeminarsAttededMessage();
         seminars.setNumberOfSeminarsAttended(Integer.parseInt(bfr.readLine()));
@@ -211,6 +220,8 @@ public class StudentAssimilator {
     public Sports setAllSportDetails() throws IOException {
 
         sports = new Sports();
+
+        NewDiaryDisplay.displaySportsPage();
 
         NewDiaryDisplay.setNumberOfEventsParticiptedMessage();
         sports.setNumberOfEventsParticipated(Integer.parseInt(bfr.readLine()));
@@ -242,6 +253,7 @@ public class StudentAssimilator {
 
         int suspensionCount = suspensions.getSuspensionCount();
 
+        NewDiaryDisplay.setRearsonForSuspensionMessage();
         while (suspensionCount-- > 0) {
             suspensions.setReasonOfSuspensionList(bfr.readLine());
         }
@@ -252,11 +264,14 @@ public class StudentAssimilator {
     public Volunteering setAllVolunteeringDetails() throws IOException {
         volunteering = new Volunteering();
 
+        NewDiaryDisplay.displayVolunterringPage();
+        
         NewDiaryDisplay.setNumberOfEventsVolunteeredMessage();
         volunteering.setNumberOfEventsVolunteered(Integer.parseInt(bfr.readLine()));
 
         int numberOfEventsVolunteered = volunteering.getNumberOfEventsVolunteered();
 
+        NewDiaryDisplay.setNameOfEventVolunteeredMessage();
         while (numberOfEventsVolunteered-- > 0) {
             volunteering.setVolunteeredEvents(bfr.readLine());
         }
@@ -265,7 +280,7 @@ public class StudentAssimilator {
 
     public Disciplinary setDisciplinaryDetails() throws Exception {
         disciplinary = new Disciplinary();
-
+        NewDiaryDisplay.displayDisciplinaryPage();
         disciplinary.setArrears(setArrearDetails());
         disciplinary.setSuspensions(setAllSuspensionDetails());
 
@@ -278,7 +293,7 @@ public class StudentAssimilator {
         nonAcademics.setDisciplinary(setDisciplinaryDetails());
         nonAcademics.setInternships(setAllInternshipDetails());
         nonAcademics.setProject(setAllProjecDetails());
-        nonAcademics.setSeminar(setAllSeminarDeatails());
+        nonAcademics.setSeminar(setAllSeminarDetails());
         nonAcademics.setSports(setAllSportDetails());
         nonAcademics.setVolunteering(setAllVolunteeringDetails());
 
