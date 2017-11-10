@@ -103,7 +103,9 @@ public class StudentAssimilator {
         student.setName(bfr.readLine());
 
         NewDiaryDisplay.displaySetRollNoMessage();
-        student.setRollNumber(bfr.readLine());
+        String input = bfr.readLine();
+        String garbage[] = input.split("[^0-9]+");
+        student.setRollNumber(garbage[garbage.length - 1]);
 
         NewDiaryDisplay.displaySetBatchMessage();
         student.setBatch(bfr.readLine());
