@@ -56,6 +56,26 @@ public class StudentAssimilator {
         return course;
     }
 
+    public Course modifyCourseToBeTaken(Student student) throws Exception {
+        course = new Course();
+
+        NewDiaryDisplay.displayCourseDetailsPage();
+
+        NewDiaryDisplay.displaySetCourseNameMessage();
+        course.setCourseName(bfr.readLine());
+
+        NewDiaryDisplay.displaySetCourseCodeMessage();
+        course.setCourseCode(bfr.readLine());
+
+        NewDiaryDisplay.displaySetCreditsMessage();
+        course.setCredits(Integer.parseInt(bfr.readLine()));
+
+        course.setMarks(setAllMarksToZero());
+        student.setCoursesTakenList(course);
+
+        return course;
+    }
+
     //IDEA : - Create an ENUM/HashMap for courses and then select the course[key] based on the
     // course code[value] entered by the user.
 
@@ -80,6 +100,8 @@ public class StudentAssimilator {
         NewDiaryDisplay.displaySetAttendanceMessage();
         marks.setAttendance(Double.parseDouble(bfr.readLine()));
 
+        course.setMarks(marks);
+
         return marks;
     }
 
@@ -96,16 +118,11 @@ public class StudentAssimilator {
         return marks;
     }
 
-    public Student setAllStudentDetails(Student student) throws Exception {
+    public Student modifyStudentDetails(Student student) throws Exception {
         NewDiaryDisplay.displayStudentDetailsPage();
 
         NewDiaryDisplay.displaySetNameMessage();
         student.setName(bfr.readLine());
-
-        NewDiaryDisplay.displaySetRollNoMessage();
-        String input = bfr.readLine();
-        String garbage[] = input.split("[^0-9]+");
-        student.setRollNumber(garbage[garbage.length - 1]);
 
         NewDiaryDisplay.displaySetBatchMessage();
         student.setBatch(bfr.readLine());
@@ -114,7 +131,7 @@ public class StudentAssimilator {
         numberOfCourses = Integer.parseInt(bfr.readLine().trim());
 
         while (numberOfCourses-- > 0) {
-            student.addCourseToCourseList(setCourseToBeTaken());
+            student.addCourseToCourseList(modifyCourseToBeTaken(student));
         }
 
         return student;
@@ -153,6 +170,7 @@ public class StudentAssimilator {
     }
 
     public Arrears setArrearDetails() throws Exception {
+        NewDiaryDisplay.displayArrearsPage();
         arrears = new Arrears();
 
         NewDiaryDisplay.setNumberOfArrearsMessage();

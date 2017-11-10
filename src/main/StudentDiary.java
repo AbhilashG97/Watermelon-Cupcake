@@ -73,7 +73,7 @@ public class StudentDiary {
 
                     ExistingDiaryDisplay.displayModificationPage();
                     System.out.println();
-                    assimilator.setAllStudentDetails(studentDiary.selectedStudent);
+                    assimilator.modifyStudentDetails(studentDiary.selectedStudent);
                     assimilator.setMarksOfCoursesTaken();
                     studentList.writeToFile(stuList);
                 }
