@@ -20,9 +20,14 @@ public class NewDiaryDisplay {
         System.out.println();
     }
 
-    public static void displayDisciplinaryPage(){
-        System.out.println("******************** STUDENT DISCIPLINARY PAGE ********************\n");
+    public static void displayArrearsPage(){
+        System.out.println("******************** STUDENT ARREARS PAGE ********************\n");
     }
+
+    public static void displaySuspensionPage(){
+        System.out.println("******************** STUDENT SUSPENSION PAGE ********************\n");
+    }
+
 
     public static void displayInternshipPage(){
         System.out.println("******************** STUDENT INTERNSHIP PAGE ********************\n");

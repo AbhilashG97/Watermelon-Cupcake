@@ -6,6 +6,7 @@ import display.ExistingDiaryDisplay;
 import display.NewDiaryDisplay;
 import display.WelcomePage;
 import student.Student;
+import util.DisplayContents;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -17,6 +18,7 @@ public class StudentDiary {
     private int selectedStudentRollNumber;
     private Student selectedStudent;
     private int diaryType;
+
 
     public StudentDiary() {
         //Default
@@ -58,7 +60,6 @@ public class StudentDiary {
                 }else{
                     Collections.sort(stuList);
                     for (Student iterator : stuList) {
-                        //diary.displayAllStudentDetails(iterator);
                         System.out.println(iterator.getRollNumber());
                     }
                     ExistingDiaryDisplay.selectStudentRollNumber();
@@ -73,27 +74,38 @@ public class StudentDiary {
                     ExistingDiaryDisplay.displayModificationPage();
                     System.out.println();
                     assimilator.setAllStudentDetails(studentDiary.selectedStudent);
+                    assimilator.setMarksOfCoursesTaken();
                     studentList.writeToFile(stuList);
                 }
                 break;
             case 3:
                 ArrayList<Student> displayStudentList = studentList.readFromFile();
                 Collections.sort(displayStudentList);
-                for (Student iterator : displayStudentList) {
-                    assimilator.displayAllStudentDetails(iterator);
+                if(displayStudentList.isEmpty()){
+                    System.err.println("Sorry, currently there are no students registered");
+                }else{
+                    for (Student iterator : displayStudentList) {
+                        assimilator.displayAllStudentDetails(iterator);
+                        DisplayContents displayContents = new DisplayContents(iterator);
+                        displayContents.displayAllNonAcademicContents();
+                    }
                 }
                 break;
             case 4:
                 ArrayList<Student> deleteStudentList = studentList.readFromFile();
-                Collections.sort(deleteStudentList);
-                int index = 0;
-                for (Student iterator : deleteStudentList) {
-                    System.out.println(index + " -> " + iterator.getName());
-                    index++;
+                if(deleteStudentList.isEmpty()){
+                    System.err.println("Sorry, there is currently nothing to display");
+                }else{
+                    Collections.sort(deleteStudentList);
+                    int index = 0;
+                    for (Student iterator : deleteStudentList) {
+                        System.out.println(index + " -> " + iterator.getName());
+                        index++;
+                    }
+                    ExistingDiaryDisplay.displayDeleteStudentMessage();
+                    deleteStudentList.remove(scanner.nextInt());
+                    studentList.writeToFile(deleteStudentList);
                 }
-                ExistingDiaryDisplay.displayDeleteStudentMessage();
-                deleteStudentList.remove(scanner.nextInt());
-                studentList.writeToFile(deleteStudentList);
                 break;
         }
     }

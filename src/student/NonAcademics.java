@@ -1,60 +1,72 @@
 package student;
 
-public class NonAcademics {
+import java.io.Serializable;
 
-        private Sports sports;
-        private Volunteering volunteering;
-        private Seminars seminar;
-        private Projects project;
-        private Internships internships;
-        private Disciplinary disciplinary;
+public class NonAcademics implements Serializable {
 
-        public Sports getSports() {
-                return sports;
-        }
+    private Sports sports;
+    private Volunteering volunteering;
+    private Seminars seminar;
+    private Projects project;
+    private Internships internships;
+    private Arrears arrears;
+    private Suspensions suspensions;
 
-        public void setSports(Sports sports) {
-                this.sports = sports;
-        }
+    public Arrears getArrears() {
+        return arrears;
+    }
 
-        public Volunteering getVolunteering() {
-                return volunteering;
-        }
+    public void setArrears(Arrears arrears) {
+        this.arrears = arrears;
+    }
 
-        public void setVolunteering(Volunteering volunteering) {
-                this.volunteering = volunteering;
-        }
+    public Suspensions getSuspensions() {
+        return suspensions;
+    }
 
-        public Seminars getSeminar() {
-                return seminar;
-        }
+    public void setSuspensions(Suspensions suspensions) {
+        this.suspensions = suspensions;
+    }
 
-        public void setSeminar(Seminars seminar) {
-                this.seminar = seminar;
-        }
+    public Sports getSports() {
+        return sports;
+    }
 
-        public Projects getProject() {
-                return project;
-        }
+    public void setSports(Sports sports) {
+        this.sports = sports;
+    }
 
-        public void setProject(Projects project) {
-                this.project = project;
-        }
+    public Volunteering getVolunteering() {
+        return volunteering;
+    }
 
-        public Internships getInternships() {
-                return internships;
-        }
+    public void setVolunteering(Volunteering volunteering) {
+        this.volunteering = volunteering;
+    }
 
-        public void setInternships(Internships internships) {
-                this.internships = internships;
-        }
+    public Seminars getSeminar() {
+        return seminar;
+    }
 
-        public Disciplinary getDisciplinary() {
-                return disciplinary;
-        }
+    public void setSeminar(Seminars seminar) {
+        this.seminar = seminar;
+    }
 
-        public void setDisciplinary(Disciplinary disciplinary) {
-                this.disciplinary = disciplinary;
-        }
+    public Projects getProject() {
+        return project;
+    }
+
+    public void setProject(Projects project) {
+        this.project = project;
+    }
+
+    public Internships getInternships() {
+        return internships;
+    }
+
+    public void setInternships(Internships internships) {
+        this.internships = internships;
+    }
+
 
 }

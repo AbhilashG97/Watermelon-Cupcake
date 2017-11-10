@@ -1,8 +1,9 @@
 package student;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Projects {
+public class Projects implements Serializable{
 
     private ArrayList<String> projectNames;
     private int numberOfProjects;

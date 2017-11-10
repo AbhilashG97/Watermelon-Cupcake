@@ -1,10 +1,11 @@
 package student;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Sports {
+public class Sports implements Serializable{
 
-    ArrayList<String> eventNames;
+    private ArrayList<String> eventNames;
     private int numberOfGoldMedalsWon;
     private int numberOfSilverMedalsWon;
     private int numberOfBronzeMedalsWon;

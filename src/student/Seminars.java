@@ -1,6 +1,8 @@
 package student;
 
-public class Seminars {
+import java.io.Serializable;
+
+public class Seminars implements Serializable{
 
     private int numberOfSeminarsAttended;
     private int numberOfSeminarsTaken;

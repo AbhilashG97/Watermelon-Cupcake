@@ -24,5 +24,4 @@ public class CourseList implements Serializable {
         courseList.add(course);
     }
 
-
 }

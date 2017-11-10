@@ -1,20 +1,25 @@
 package student;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Volunteering {
-    
+public class Volunteering implements Serializable{
+
     private int numberOfEventsVolunteered;
+    private ArrayList<String> volunteeredEvents;
+
+    public Volunteering(){
+        volunteeredEvents = new ArrayList<>();
+        numberOfEventsVolunteered = 0;
+    }
 
     public ArrayList<String> getVolunteeredEvents() {
         return volunteeredEvents;
     }
 
     public void setVolunteeredEvents(String eventName) {
-        volunteeredEvents.add(eventName);        
+        volunteeredEvents.add(eventName);
     }
-
-    private ArrayList<String> volunteeredEvents; 
 
     public int getNumberOfEventsVolunteered() {
         return numberOfEventsVolunteered;

@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Student implements Serializable, Comparable<Student> {
 
-    public ArrayList<Course> coursesTaken = new ArrayList<>();
+    public ArrayList<Course> coursesTakenList = new ArrayList<>();
     private NonAcademics nonAcademics;
     private String name;
     private String rollNumber;
@@ -18,10 +18,10 @@ public class Student implements Serializable, Comparable<Student> {
     public Student(String name, String rollNo, String batch, ArrayList<Course> courseList,
                    NonAcademics nonAcademics) {
         this.name = name;
-        this.rollNumber = rollNo.replaceAll(".", "").substring(9);
+        this.rollNumber = rollNo;
         this.batch = batch;
         this.nonAcademics = nonAcademics;
-        coursesTaken.addAll(courseList);
+        coursesTakenList.addAll(courseList);
     }
 
     public NonAcademics getNonAcademics() {
@@ -32,16 +32,16 @@ public class Student implements Serializable, Comparable<Student> {
         this.nonAcademics = nonAcademics;
     }
 
-    public ArrayList<Course> getCoursesTaken() {
-        return coursesTaken;
+    public ArrayList<Course> getCoursesTakenList() {
+        return coursesTakenList;
     }
 
-    public void setCoursesTaken(ArrayList<Course> coursesTaken) {
-        this.coursesTaken = coursesTaken;
+    public void setCoursesTakenList(Course course) {
+        coursesTakenList.add(course);
     }
 
     public void addCourseToCourseList(Course course) {
-        coursesTaken.add(course);
+        coursesTakenList.add(course);
     }
 
     public String getName() {
@@ -57,7 +57,7 @@ public class Student implements Serializable, Comparable<Student> {
     }
 
     public void setRollNumber(String rollNumber) {
-        this.rollNumber = rollNumber.substring(12);
+        this.rollNumber = rollNumber;
     }
 
     public String getBatch() {
@@ -69,12 +69,9 @@ public class Student implements Serializable, Comparable<Student> {
     }
 
     public ArrayList<Course> getCourses() {
-        return coursesTaken;
+        return coursesTakenList;
     }
 
-    public void setCourses(ArrayList<Course> c) {
-        coursesTaken.addAll(c);
-    }
 
     @Override
     public String toString() {

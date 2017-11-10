@@ -1,8 +1,9 @@
 package student;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Internships {
+public class Internships implements Serializable{
 
     private int numberOfInternships;
     private ArrayList<String> listOfInternships;

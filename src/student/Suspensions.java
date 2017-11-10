@@ -1,8 +1,9 @@
 package student;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Suspensions {
+public class Suspensions implements Serializable{
 
     private ArrayList<String> reasonOfSuspensionList;
     private int suspensionCount;
