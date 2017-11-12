@@ -1,9 +1,10 @@
-# Watermelon-Cupcake
+# WatermelonCupcake
+[![Gitter chat](https://badges.gitter.im/AbhilashG97/WatermelonCupcake.png)](https://gitter.im/WatermelonCupcake/Lobby "Gitter chat")
 
+<p align="center"><img src ="images/watermelonCupcake.jpg" /></p>
 
-![ScreenShot](https://raw.github.com/AbhilashG97/Watermelon-Cupcake/master/images/watermelonCupcake.jpg)
+A CLI based Java appliacation that assists in keeping track of overall development of a student. 
 
+The project was built using [Intelli-J Idea IDE](https://www.jetbrains.com/idea/). 
 
-<hr>
-
-As the discription clearly states, this is a TOP-SECRET Project; so I can't tell you much about it. 
+Feel free to ask any questions in the Gitter channel for this project. :sparkles:
