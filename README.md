@@ -7,4 +7,4 @@ A CLI based Java appliacation that assists in keeping track of overall developme
 
 The project was built using [Intelli-J Idea IDE](https://www.jetbrains.com/idea/). 
 
-Feel free to ask any questions in the Gitter channel for this project. :sparkles:
+Feel free to ask any questions in the Gitter channel of this project. :sparkles:
